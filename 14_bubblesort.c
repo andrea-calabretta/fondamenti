@@ -12,7 +12,7 @@ ordiniamo un array di numeri casuali (random) da 0 a 100
 
 int main(){
   int a[N];
-  int i, tmp;
+  int i, j, tmp;
   int max = 300;
   int min = 100;
   srand(time(NULL));
@@ -23,10 +23,10 @@ int main(){
     a[i]=rand()%(max-min+1)+min;
     printf("a[%d] = %d\n", i, a[i]);
   }
-  for(int i = 0; i< N-1; i++){
-    for(int j=0; j< N-1; j++){
+  for(i=0; i< N-1; i++){
+    for(j=0; j< N-1; j++){
       // se l'elemento attuale è maggiore del successivo, scambiali
-      if(a[j]>a[j+1]){
+      if(a[j] > a[j+1]){
         tmp = a[j];
         a[j] = a[j+1];
         a[j+1] = tmp;
