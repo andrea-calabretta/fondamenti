@@ -1,5 +1,5 @@
 /*
-  creare un array di numeri casuali (random)
+  creare un array di numeri casuali (random) da 0 a 100
 */
 
 #include<stdio.h>
@@ -10,6 +10,8 @@
 int main(){
   int a[N];
   int i;
+  int max = 300;
+  int min = 100;
   srand(time(NULL));
 
   printf("------ valori nello stack -----\n");
@@ -20,7 +22,7 @@ int main(){
 
   printf("------ valori random----\n");
   for(i=0; i<N; i++){
-    a[i]=rand();
+    a[i]=rand()%(max-min+1)+min;
     printf("a[%d] = %d\n", i, a[i]);
   }
 }
