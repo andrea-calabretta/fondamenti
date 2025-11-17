@@ -19,6 +19,7 @@ int main(){
     for(j=0; j<DIM; j++){
       if(a[i]==b[j]){
         isPresent = 1;
+        break;
         //se incontro un duplicato me lo segno nel FLAG isPresent
       }
 
